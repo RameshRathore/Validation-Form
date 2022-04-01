@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registration validation form</h1>
+
+    <div class="container">
+        
+
+        <form><cenetr>
+            <p id="p">Registration Form</p></cenetr>
+        <div id="input-group">
+            <label>Full Name</label>
+            <input type="text"placeholder ="Enter Name"id="contact-name" required onkeyup="validateName">
+            <span id="name-error"></span>
+        </div>
+
+        <div id="input-group">
+            <label>Phone No</label>
+            <input type="tel"placeholder="+92xxxxxxxxxx"id="contact-phone" required onkeyup="validatePhone()">
+            <span id="email-error"></span>
+            </div>
+
+            <div id="input-group">
+                <label>Email Id</label>
+                <input type="email"placeholder ="Enter email"id="contact-email" required onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div id="input-group">
+                <label>Message</label>
+                <textarea rows="3" cols="42" placeholder ="Resons Here"  required id ="contact-message"onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit-error"> </span>
+    </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
